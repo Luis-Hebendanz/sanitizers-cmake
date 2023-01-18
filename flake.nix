@@ -15,11 +15,14 @@
             spkgs = pkgs.${system};
             pypkgs = pkgs.${system}.python310Packages;
           in
-         spkgs.mkDerivation {
+         spkgs.stdenv.mkDerivation {
           name = "cmake-sanitizers";
           src = self;
-          phases = [];
-         }
+
+         installPhase = ''
+            cp -r $src $out
+        '';
+         };
       });
 
     };

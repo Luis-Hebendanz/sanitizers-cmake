@@ -1,3 +1,4 @@
 # out-of-source build top-level folders.
+result
 build/
 _build/
