@@ -29,7 +29,7 @@ set(FLAG_CANDIDATES
     "/fsanitize=address"
 
     # Clang 3.2+ use this version. The no-omit-frame-pointer option is optional.
-    "-g -fsanitize=address -fno-omit-frame-pointer"
+    "-g -fsanitize=address -fno-omit-frame-pointer -fno-optimize-sibling-calls -fsanitize-address-use-after-return=always"
     "-g -fsanitize=address"
 
     # Older deprecated flag for ASan
